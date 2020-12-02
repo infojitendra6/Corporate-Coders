@@ -1,0 +1,64 @@
+Problem Statement 2:
+Ans:
+<?php
+
+$ans=0;
+list($b, $v, $s) = explode(' ', readline());
+list($rsV, $rsS) = explode(' ', readline());
+
+if($rsV>$rsS)
+{
+
+    if($b/2>=$v)
+    {
+       $ans=$rsV*$v;
+       $b=$b-2*$v;
+      $ans=$ans+intval($b/2)*$rsS;
+    }
+    else
+    {
+        $ans=intval($b/2)*$rsV; 
+    }
+}
+else {
+   if($b/2>=$s)
+    {
+       $ans=$rsS*$s;
+       $b=$b-2*$s;
+      $ans=$ans+intval($b/2)*$rsV;
+    }
+    else
+    {
+        $ans=intval($b/2)*$rsS; 
+    } 
+}
+
+ echo $ans;
+?>
+
+Example 1:
+Input:
+9 2 3 (9 breads, 2 vada, 3 samosa)
+10 15 (Rs.10 - Vadapav, Rs.15 - Samosapav)
+Output:
+55 (Maximum profit possible is Rs.55)
+Example 2:
+Input:
+15 3 5 (15 breads, 3 vada, 5 samosa)
+10 15 (Rs.10 - Vadapav, Rs.15 - Samosapav)
+Output:
+95 (Maximum profit possible is Rs.95)
+
+Example 3:
+Input:
+9 2 3 (9 breads, 2 vada, 3 samosa)
+15 10 (Rs.10 - Vadapav, Rs.15 - Samosapav)
+Output:
+50 (Maximum profit possible is Rs.50)
+Example 4:
+Input:
+15 3 5 (15 breads, 3 vada, 5 samosa)
+15 10 (Rs.10 - Vadapav, Rs.15 - Samosapav)
+Output:
+85 (Maximum profit possible is Rs.85)
+

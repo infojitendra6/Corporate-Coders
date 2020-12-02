@@ -1,0 +1,67 @@
+Problem Statement 1:
+ANS: 
+<?php
+$a = (int)readline();
+
+list($b, $c, $d, $e, $f) = explode(' ', readline());
+// first minute
+if($b<50)
+$a=intval($a/2);
+else 
+$a=$a*2+1;
+
+// 2nd minute
+if($c<50)
+$a=intval($a/2);
+else 
+$a=$a*2+1;
+
+// 3nd minute
+if($d<50)
+$a=intval($a/2);
+else 
+$a=$a*2+1;
+
+// 4th minute
+if($e<50)
+$a=intval($a/2);
+else 
+$a=$a*2+1;
+
+// 5th minute
+if($f<50)
+$a=intval($a/2);
+else 
+$a=$a*2+1;
+
+// it can be replace in form of loop
+
+ echo $a;
+?>
+
+
+
+Example 1:
+Input:
+2 (2 servers)
+10 60 50 15 20 (On 1st minute - 10% load, on 2nd minute - 60% load & so on)
+Output:
+1 (After 5 minute, 1 server is running)
+Example 2:
+Input:
+4 (2 servers)
+10 60 50 15 20 (On 1st minute - 10% load, on 2nd minute - 60% load & so on)
+Output:
+2 (After 5 minute, 2 server is running)
+Example 3:
+Input:
+2 (2 servers)
+10 20 50 15 60 (On 1st minute - 10% load, on 2nd minute - 20% load & so on)
+Output:
+1 (After 5 minute, 1 server is running)
+Example 4:
+Input:
+4 (2 servers)
+10 20 50 15 60 (On 1st minute - 10% load, on 2nd minute - 20% load & so on)
+Output:
+3 (After 5 minute, 2 server is running)
